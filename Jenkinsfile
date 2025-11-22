@@ -18,7 +18,6 @@ pipeline {
             steps {
 
                 sh '''
-                    Testing. Version: $REACT_APP_VERSION
                     ls -la
                     node --version
                     npm --version
@@ -40,7 +39,6 @@ pipeline {
                     }
                     steps {
                         sh '''
-                            echo "Testing. Version: $REACT_APP_VERSION"
                             test -f build/index.html
                             npm test
                         '''
