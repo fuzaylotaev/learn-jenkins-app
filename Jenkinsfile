@@ -39,6 +39,7 @@ pipeline {
                     }
                     steps {
                         sh '''
+                            echo "Testing. Version: $REACT_APP_VERSION"
                             test -f build/index.html
                             npm test
                         '''
